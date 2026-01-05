@@ -49,4 +49,21 @@ public static class DbSeeder
             }
         }
     }
+
+    public static async Task SeedStatusesAsync(IServiceProvider serviceProvider)
+    {
+        var context = serviceProvider.GetRequiredService<AppDbContext>();
+
+        if (!context.Statuses.Any())
+        {
+            context.Statuses.AddRange(new List<Status>
+            {
+                new Status { StatusName = "Draft" },
+                new Status { StatusName = "Published" },
+                new Status { StatusName = "Archived" }
+            });
+
+            await context.SaveChangesAsync();
+        }
+    }
 }

@@ -98,6 +98,9 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<ICourseService, CourseService>();
+builder.Services.AddScoped<ILessonService, LessonService>();
 #endregion
 
 // Authorization Policies if needed
@@ -119,6 +122,7 @@ using (var scope = app.Services.CreateScope())
         
         // Run Seeder
         await DbSeeder.SeedRolesAndAdminAsync(services);
+        await DbSeeder.SeedStatusesAsync(services);
     }
     catch (Exception ex)
     {

@@ -12,5 +12,8 @@ public class CourseConfiguration : IEntityTypeConfiguration<Course>
         
         builder.Property(u => u.Id)
             .HasDefaultValueSql("gen_random_uuid()");
+
+        builder.Property(U => U.Title)
+            .IsRequired();
     }
 }
