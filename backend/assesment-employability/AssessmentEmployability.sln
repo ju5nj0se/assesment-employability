@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F09AE01C-F92E-47CB-A12D-9A92006580B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssessmentEmployability.Domain", "src\AssessmentEmployability.Domain\AssessmentEmployability.Domain.csproj", "{D73C0E95-40FF-4E5C-9E92-8D30F9DC4B04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssessmentEmployability.Application", "src\AssessmentEmployability.Application\AssessmentEmployability.Application.csproj", "{FDA815C0-40DD-4D20-8899-31F08263445E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssessmentEmployability.Infrastructure", "src\AssessmentEmployability.Infrastructure\AssessmentEmployability.Infrastructure.csproj", "{C6CB5537-D485-4B10-9435-A54AA11017EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssessmentEmployability.API", "src\AssessmentEmployability.API\AssessmentEmployability.API.csproj", "{DA7BB18C-5952-42E8-8FCD-AD0EC79ED299}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0247EDD0-03D2-47CC-AEBA-091A5F95875D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssessmentEmployability.UnitTests", "tests\AssessmentEmployability.UnitTests\AssessmentEmployability.UnitTests.csproj", "{228C8F43-3C18-4C55-9E42-4F7D3D2BBECC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D73C0E95-40FF-4E5C-9E92-8D30F9DC4B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D73C0E95-40FF-4E5C-9E92-8D30F9DC4B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D73C0E95-40FF-4E5C-9E92-8D30F9DC4B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D73C0E95-40FF-4E5C-9E92-8D30F9DC4B04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDA815C0-40DD-4D20-8899-31F08263445E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDA815C0-40DD-4D20-8899-31F08263445E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDA815C0-40DD-4D20-8899-31F08263445E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDA815C0-40DD-4D20-8899-31F08263445E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6CB5537-D485-4B10-9435-A54AA11017EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6CB5537-D485-4B10-9435-A54AA11017EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6CB5537-D485-4B10-9435-A54AA11017EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6CB5537-D485-4B10-9435-A54AA11017EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA7BB18C-5952-42E8-8FCD-AD0EC79ED299}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA7BB18C-5952-42E8-8FCD-AD0EC79ED299}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA7BB18C-5952-42E8-8FCD-AD0EC79ED299}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA7BB18C-5952-42E8-8FCD-AD0EC79ED299}.Release|Any CPU.Build.0 = Release|Any CPU
+		{228C8F43-3C18-4C55-9E42-4F7D3D2BBECC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{228C8F43-3C18-4C55-9E42-4F7D3D2BBECC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{228C8F43-3C18-4C55-9E42-4F7D3D2BBECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{228C8F43-3C18-4C55-9E42-4F7D3D2BBECC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D73C0E95-40FF-4E5C-9E92-8D30F9DC4B04} = {F09AE01C-F92E-47CB-A12D-9A92006580B1}
+		{FDA815C0-40DD-4D20-8899-31F08263445E} = {F09AE01C-F92E-47CB-A12D-9A92006580B1}
+		{C6CB5537-D485-4B10-9435-A54AA11017EA} = {F09AE01C-F92E-47CB-A12D-9A92006580B1}
+		{DA7BB18C-5952-42E8-8FCD-AD0EC79ED299} = {F09AE01C-F92E-47CB-A12D-9A92006580B1}
+		{228C8F43-3C18-4C55-9E42-4F7D3D2BBECC} = {0247EDD0-03D2-47CC-AEBA-091A5F95875D}
+	EndGlobalSection
+EndGlobal
