@@ -1,0 +1,49 @@
+services:
+  database:
+    image: postgres:15-alpine
+    container_name: db
+    environment:
+      POSTGRES_USER: juan
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: assessment_employability
+    ports:
+      - "5433:5432" # Puerto cambiado de 5432 a 5433
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - assessment-network
+
+  backend:
+    build:
+      context: ./backend/assesment-employability
+      dockerfile: Dockerfile
+    container_name: api
+    ports:
+      - "5000:8080"
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=database;Port=5432;Database=assessment_employability;Username=juan;Password=1234
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+    depends_on:
+      - database
+    networks:
+      - assessment-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: front
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - assessment-network
+
+networks:
+  assessment-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

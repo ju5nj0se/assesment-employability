@@ -24,7 +24,7 @@ public class CourseServiceTests
     {
         // Arrange
         var request = new CreateCourseRequestDto { Title = "Test Course" };
-        var status = new Status { Id = Guid.NewGuid(), Name = "Draft" };
+        var status = new Status { Id = 1, StatusName = "Draft" };
         
         _mockUnitOfWork.Setup(u => u.Statuses.GetByNameAsync("Draft"))
             .ReturnsAsync(status);
@@ -67,8 +67,8 @@ public class CourseServiceTests
     {
         // Arrange
         var courseId = Guid.NewGuid();
-        var course = new Course { Id = courseId, Title = "Ready Course", StatusId = Guid.NewGuid() };
-        var publishedStatus = new Status { Id = Guid.NewGuid(), Name = "Published" };
+        var course = new Course { Id = courseId, Title = "Ready Course", StatusId = 1 };
+        var publishedStatus = new Status { Id = 2, StatusName = "Published" };
         
         _mockUnitOfWork.Setup(u => u.Courses.GetByIdAsync(courseId))
             .ReturnsAsync(course);
