@@ -77,6 +77,7 @@ public class CoursesController : ControllerBase
     }
 
     [HttpPatch("{id}/publish")]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> PublishCourse(Guid id)
     {
         var result = await _courseService.PublishCourseAsync(id);
@@ -94,6 +95,7 @@ public class CoursesController : ControllerBase
     }
 
     [HttpPatch("{id}/unpublish")]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> UnpublishCourse(Guid id)
     {
         var result = await _courseService.UnpublishCourseAsync(id);
@@ -111,6 +113,7 @@ public class CoursesController : ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> DeleteCourse(Guid id)
     {
         var result = await _courseService.DeleteCourseAsync(id);
